@@ -44,6 +44,12 @@ a{color:var(--acc)}
 .chk{flex:none;display:flex;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;color:var(--on)}
 .brand{display:flex;align-items:center;justify-content:center;min-height:84px;padding:0 20px;border:1px solid var(--line);border-radius:16px;background:var(--bg2);color:var(--acc3);font-family:'Anton',Impact,sans-serif;font-size:30px;letter-spacing:1px;text-transform:uppercase}
 .brand.more{border-color:var(--acc);color:var(--on);background:var(--acc)}
+.logo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:22px 16px 16px;background:#FFFFFF;border:1px solid var(--line);border-radius:16px;min-height:150px;transition:transform .15s,border-color .15s}
+.logo:hover{transform:translateY(-3px);border-color:var(--acc)}
+.logo img{display:block;height:72px;width:100%;object-fit:contain}
+.logo span{font-weight:700;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:900px){.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.logo{min-height:120px}.logo img{height:56px}}
 .step{padding:32px;background:var(--card);border:1px solid var(--line);border-radius:16px;display:flex;flex-direction:column;gap:12px}
 .step .n{font-family:'Anton',Impact,sans-serif;font-size:56px;line-height:1}
 .step strong{font-size:22px}
@@ -161,9 +167,18 @@ a{color:var(--acc)}
 <section class="sec" style="background:var(--blue)">
 <div class="wrap" style="display:flex;flex-direction:column;gap:44px">
 <div class="center"><div class="kicker">MULTIMARCA</div><h2 class="d h2" style="font-size:60px">Aprende a trabajar con diferentes marcas</h2></div>
-<div class="grid g4">
-<div class="brand">Toyota</div><div class="brand">Ford</div><div class="brand">Volkswagen</div><div class="brand">Nissan</div>
-<div class="brand">Renault</div><div class="brand">Honda</div><div class="brand more" style="grid-column:span 2">¡Y mucho más!</div>
+<div class="grid g5">
+<div class="logo"><img src="img/toyota.png" alt="Toyota" loading="lazy"><span>Toyota</span></div>
+<div class="logo"><img src="img/ford.png" alt="Ford" loading="lazy"><span>Ford</span></div>
+<div class="logo"><img src="img/volkswagen.png" alt="Volkswagen" loading="lazy"><span>Volkswagen</span></div>
+<div class="logo"><img src="img/chevrolet.png" alt="Chevrolet" loading="lazy"><span>Chevrolet</span></div>
+<div class="logo"><img src="img/renault.png" alt="Renault" loading="lazy"><span>Renault</span></div>
+<div class="logo"><img src="img/honda.png" alt="Honda" loading="lazy"><span>Honda</span></div>
+<div class="logo"><img src="img/kia.png" alt="Kia" loading="lazy"><span>Kia</span></div>
+<div class="logo"><img src="img/opel.png" alt="Opel" loading="lazy"><span>Opel</span></div>
+<div class="logo"><b class="d" style="height:72px;display:flex;align-items:center;font-size:34px;color:var(--acc3)">NISSAN</b><span>Nissan</span></div>
+<div class="logo" style="background:var(--acc);border-color:var(--acc)"><b class="d" style="height:72px;display:flex;align-items:center;font-size:30px;color:#FFFFFF;text-align:center">¡Y MUCHO MÁS!</b><span style="color:#FFFFFF">Otras marcas</span></div>
+</div>
 </div>
 </div>
 </section>
