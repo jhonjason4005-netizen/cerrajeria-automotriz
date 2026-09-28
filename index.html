@@ -83,6 +83,25 @@ a{color:var(--acc)}
 @keyframes lbIn{from{opacity:0}to{opacity:1}}
 @media (max-width:900px){.bonos{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.bname{font-size:12px}.btag{font-size:10px;padding:3px 8px}.bimg{border-radius:14px}}
 @media (prefers-reduced-motion:reduce){.bimg{animation:none}.bono{transition:none;opacity:1;transform:none}}
+.cd-bar{position:sticky;top:0;z-index:15;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding:10px 16px;background:var(--acc);color:#fff}
+.cd-lbl{display:flex;align-items:center;gap:8px;font-weight:800;letter-spacing:1.5px;font-size:15px}
+.cd{display:flex;align-items:flex-start;gap:6px}
+.cd-u{display:flex;flex-direction:column;align-items:center;gap:3px}
+.cd-u b{font-family:'Anton',Impact,sans-serif;font-weight:400;font-variant-numeric:tabular-nums;border-radius:8px;text-align:center}
+.cd-u span{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.cd-s{font-style:normal;font-family:'Anton',Impact,sans-serif}
+.cd-sm .cd-u b{background:#fff;color:var(--acc);font-size:20px;min-width:38px;padding:4px 0}
+.cd-sm .cd-u span{color:#fff}
+.cd-sm .cd-s{color:#fff;font-size:20px;margin-top:4px}
+.cd-box{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px 20px;border-radius:16px;background:#FDF1F3;border:1px solid #F3C4CC;width:100%;box-sizing:border-box}
+.cd-lbl2{font-weight:800;letter-spacing:1.5px;font-size:14px;color:var(--acc)}
+.cd-lg .cd-u b{background:var(--acc);color:#fff;font-size:40px;min-width:70px;padding:8px 0}
+.cd-lg .cd-u span{color:var(--muted)}
+.cd-lg .cd-s{color:var(--acc);font-size:36px;margin-top:10px}
+.cd-u b.tick{animation:cdTick .35s ease}
+@keyframes cdTick{0%{transform:scale(1.12)}100%{transform:scale(1)}}
+@media (max-width:900px){.cd-lbl{font-size:12px}.cd-sm .cd-u b{font-size:17px;min-width:32px}.cd-lg .cd-u b{font-size:30px;min-width:54px}.cd-lg .cd-s{font-size:26px;margin-top:8px}}
+@media (prefers-reduced-motion:reduce){.cd-u b.tick{animation:none}}
 .sticky{display:none}
 @media (max-width:900px){
  .wrap{padding:0 20px}
@@ -116,6 +135,7 @@ a{color:var(--acc)}
 </div>
 </header>
 
+<div class="cd-bar cd-wrap"><span class="cd-lbl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>OFERTA EXPIRA EN:</span><div class="cd cd-sm" role="timer" aria-live="off"><div class="cd-u"><b data-cd="d">00</b><span>Días</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="h">00</b><span>Horas</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="m">00</b><span>Min</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="s">00</b><span>Seg</span></div></div></div>
 <!-- HERO -->
 <section class="hero sec" style="padding-bottom:72px">
 <div class="wrap center" style="gap:24px">
@@ -271,6 +291,7 @@ a{color:var(--acc)}
 <div class="wrap" style="display:flex;justify-content:center">
 <div class="offer" style="width:100%;max-width:660px;padding:56px 64px;background:var(--bg2);border:2px solid var(--acc);border-radius:28px;box-shadow:0 0 60px rgba(200,16,46,.12);display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center">
 <div style="display:flex;align-items:center;gap:8px;color:var(--acc);font-weight:700;letter-spacing:2px;font-size:14px"><span style="width:8px;height:8px;border-radius:50%;background:var(--acc)"></span>OFERTA ESPECIAL</div>
+<div class="cd-box cd-wrap"><span class="cd-lbl2">LA OFERTA EXPIRA EN:</span><div class="cd cd-lg" role="timer" aria-live="off"><div class="cd-u"><b data-cd="d">00</b><span>Días</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="h">00</b><span>Horas</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="m">00</b><span>Min</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="s">00</b><span>Seg</span></div></div></div>
 <h2 class="d" style="font-size:38px;line-height:1.08">22 cursos + 6 bonos especiales</h2>
 <div style="width:64px;height:2px;background:var(--line)"></div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
@@ -361,6 +382,25 @@ a{color:var(--acc)}
   bs.forEach(function(b){ b.addEventListener('click',function(){ im.src=b.querySelector('img').src; im.alt=b.querySelector('img').alt; lb.classList.add('open'); }); });
   lb.addEventListener('click',function(e){ if(e.target!==im) close(); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
+<script>
+(function(){
+  /* FECHA REAL EN QUE TERMINA LA OFERTA (hora de Colombia). Cámbiala aquí: */
+  var FIN = new Date('2026-10-01T23:59:59-05:00');
+  var wraps=[].slice.call(document.querySelectorAll('.cd-wrap'));
+  var last={};
+  function pad(n){ return (n<10?'0':'')+n; }
+  function tick(){
+    var ms=FIN-new Date();
+    if(ms<=0){ wraps.forEach(function(w){ w.style.display='none'; }); clearInterval(t); return; }
+    var v={d:Math.floor(ms/864e5),h:Math.floor(ms/36e5)%24,m:Math.floor(ms/6e4)%60,s:Math.floor(ms/1e3)%60};
+    document.querySelectorAll('[data-cd]').forEach(function(el){
+      var k=el.getAttribute('data-cd'), val=pad(v[k]);
+      if(el.textContent!==val){ el.textContent=val; el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); }
+    });
+  }
+  var t=setInterval(tick,1000); tick();
 })();
 </script>
 </body>
