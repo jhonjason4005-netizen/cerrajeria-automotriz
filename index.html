@@ -144,6 +144,16 @@ a{color:var(--acc)}
 @keyframes hFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes hIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @media (max-width:900px){.hero2{padding:36px 0 56px}.hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:20px}.hero-copy{display:contents}.hero-badge{order:1}.hero-h1{order:2}.hero-visual{order:3;padding:26px 6px 30px}.hero-lead{order:4}.hero-list{order:5}.hero-cta{order:6}.hero-trust{order:7}.hero-h1{font-size:44px}.hero-lead{font-size:17px}.hero-list li{font-size:16px}.hero-cta{flex-direction:column;align-items:stretch;gap:14px}.hero-price{flex-direction:row;align-items:baseline;gap:10px;justify-content:center}.hero-price b{font-size:26px}.hero-trust{justify-content:center}.hero-badge{font-size:12px}.hv-card{padding:14px 10px;border-radius:20px}.hv-chip{padding:9px 12px;font-size:12px;border-radius:12px}.hv-c1 b{font-size:30px}.hv-c1{left:-4px}.hv-c2{right:-4px}.hv-c3{left:12px;bottom:-10px}}
+.hero-grid{grid-template-columns:minmax(0,1fr)!important;justify-items:center}
+.hero-copy{align-items:center;text-align:center;max-width:980px}
+.hero-badge{align-self:center}
+.hero-h1{font-size:80px}
+.hero-lead{max-width:720px}
+.hero-list{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:10px 26px}
+.hero-cta{justify-content:center}
+.hero-trust{justify-content:center}
+.hero2{background:radial-gradient(760px 420px at 50% 0%,rgba(200,16,46,.10),transparent 70%),radial-gradient(#C9CED5 1px,transparent 1px) 0 0/22px 22px,var(--bg)}
+@media (max-width:900px){.hero-copy{display:flex}.hero-h1{font-size:44px}.hero-list{flex-direction:column;align-items:flex-start;align-self:center}}
 @media (prefers-reduced-motion:reduce){.hv-chip,.hero-copy,.hero-visual,.hb-dot{animation:none}}
 .sticky{display:none}
 @media (max-width:900px){
@@ -200,13 +210,6 @@ a{color:var(--acc)}
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg>Acceso de por vida</span>
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Celular o PC</span>
 </div>
-</div>
-<div class="hero-visual">
-<div class="hv-glow" aria-hidden="true"></div>
-<div class="hv-card"><img src="img/hero-plataforma.jpg" alt="La plataforma del curso en celular y computador" width="966" height="516" fetchpriority="high"></div>
-<div class="hv-chip hv-c1"><b>22</b><span>cursos<br>en video</span></div>
-<div class="hv-chip hv-c2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18"/><path d="M12 8c-2-4-6-4-6-1.5S10 8 12 8zm0 0c2-4 6-4 6-1.5S14 8 12 8z"/></svg><span><b>+6 bonos</b> de diagnóstico</span></div>
-<div class="hv-chip hv-c3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.3-9.3"/><path d="m16 7 3 3"/><path d="m14 9 2 2"/></svg><span>Llaves · Controles · Inmovilizadores</span></div>
 </div>
 </div>
 </section>
