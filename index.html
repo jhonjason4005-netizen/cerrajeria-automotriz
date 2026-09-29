@@ -155,6 +155,18 @@ a{color:var(--acc)}
 .hero2{background:radial-gradient(760px 420px at 50% 0%,rgba(200,16,46,.10),transparent 70%),radial-gradient(#C9CED5 1px,transparent 1px) 0 0/22px 22px,var(--bg)}
 @media (max-width:900px){.hero-copy{display:flex}.hero-h1{font-size:44px}.hero-list{flex-direction:column;align-items:flex-start;align-self:center}}
 @media (prefers-reduced-motion:reduce){.hv-chip,.hero-copy,.hero-visual,.hb-dot{animation:none}}
+.rev{position:relative;margin:0;padding:30px;background:#fff;border:1px solid var(--line);border-radius:20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 26px rgba(28,33,39,.08);transition:transform .2s,box-shadow .2s}
+.rev:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(28,33,39,.14)}
+.rev-q{position:absolute;top:22px;right:24px;color:#F3C4CC}
+.rev-stars{display:flex;gap:2px}
+.rev blockquote{margin:0;font-size:18px;line-height:1.6;color:var(--text)}
+.rev figcaption{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:6px}
+.rev-av{flex:none;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:var(--acc);color:#fff;font-family:'Anton',Impact,sans-serif;font-size:22px}
+.rev-who{display:flex;flex-direction:column;gap:3px}
+.rev-who b{font-size:18px}
+.rev-who span{display:flex;align-items:center;gap:7px;font-size:15px;color:var(--muted)}
+.rev-who img{border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+@media (max-width:900px){.rev{padding:24px}.rev blockquote{font-size:16px}}
 .sticky{display:none}
 @media (max-width:900px){
  .wrap{padding:0 20px}
@@ -319,6 +331,39 @@ a{color:var(--acc)}
 <div class="step"><span class="n" style="color:var(--acc)">01</span><strong>Compras en Hotmart</strong><span>Pago seguro con los medios disponibles en tu país.</span></div>
 <div class="step"><span class="n" style="color:var(--acc3)">02</span><strong>Recibes usuario + contraseña</strong><span>Te llegan tus datos de acceso de forma digital.</span></div>
 <div class="step"><span class="n" style="color:var(--acc2)">03</span><strong>Empiezas a aprender</strong><span>Entras desde tu celular o PC cuando quieras, para siempre.</span></div>
+</div>
+</div>
+</section>
+
+<!-- RESEÑAS -->
+<section class="sec" style="background:var(--blue)">
+<div class="wrap" style="display:flex;flex-direction:column;gap:44px">
+<div class="center"><div class="kicker">OPINIONES DE ALUMNOS</div><h2 class="d h2" style="font-size:56px">Lo que dicen nuestros alumnos</h2></div>
+<div class="grid g2">
+<figure class="rev">
+<svg class="rev-q" width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5c0-4 2-7 6-8l.8 1.6C8.6 7.5 7.6 9 7.5 11H10v7H4zm10 0v-5c0-4 2-7 6-8l.8 1.6c-2.2.9-3.2 2.4-3.3 4.4H20v7h-6z"/></svg>
+<div class="rev-stars" aria-label="5 de 5 estrellas"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div>
+<blockquote>Me gustó mucho el programa porque explica la cerrajería automotriz de una manera bastante clara. Yo ya tenía algo de experiencia, pero aprendí varios procedimientos que no conocía y ahora tengo más confianza para atender diferentes vehículos. Muy completo el material.</blockquote>
+<figcaption><span class="rev-av">C</span><span class="rev-who"><b>Carlos</b><span><img src="img/flags/co.png" alt="" width="22" height="15">Colombia</span></span></figcaption>
+</figure>
+<figure class="rev">
+<svg class="rev-q" width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5c0-4 2-7 6-8l.8 1.6C8.6 7.5 7.6 9 7.5 11H10v7H4zm10 0v-5c0-4 2-7 6-8l.8 1.6c-2.2.9-3.2 2.4-3.3 4.4H20v7h-6z"/></svg>
+<div class="rev-stars" aria-label="5 de 5 estrellas"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div>
+<blockquote>Llevaba tiempo queriendo aprender cerrajería automotriz y este programa me ayudó bastante. Lo que más me gustó fue tener toda la información organizada y poder estudiar a mi ritmo. Ya he podido aplicar varios conocimientos en trabajos reales.</blockquote>
+<figcaption><span class="rev-av">J</span><span class="rev-who"><b>Juan</b><span><img src="img/flags/mx.png" alt="" width="22" height="15">México</span></span></figcaption>
+</figure>
+<figure class="rev">
+<svg class="rev-q" width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5c0-4 2-7 6-8l.8 1.6C8.6 7.5 7.6 9 7.5 11H10v7H4zm10 0v-5c0-4 2-7 6-8l.8 1.6c-2.2.9-3.2 2.4-3.3 4.4H20v7h-6z"/></svg>
+<div class="rev-stars" aria-label="5 de 5 estrellas"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div>
+<blockquote>Muy buen programa. Al principio pensé que sería complicado, pero las explicaciones son fáciles de seguir y hay bastante material para aprender. Me ha servido para mejorar mis conocimientos y ofrecer nuevos servicios en mi trabajo. Lo recomiendo totalmente.</blockquote>
+<figcaption><span class="rev-av">M</span><span class="rev-who"><b>Mateo</b><span><img src="img/flags/pe.png" alt="" width="22" height="15">Perú</span></span></figcaption>
+</figure>
+<figure class="rev">
+<svg class="rev-q" width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5c0-4 2-7 6-8l.8 1.6C8.6 7.5 7.6 9 7.5 11H10v7H4zm10 0v-5c0-4 2-7 6-8l.8 1.6c-2.2.9-3.2 2.4-3.3 4.4H20v7h-6z"/></svg>
+<div class="rev-stars" aria-label="5 de 5 estrellas"><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></div>
+<blockquote>Estoy muy conforme con el contenido. Tiene información que normalmente cuesta bastante encontrar junta en un solo lugar. He aprendido sobre diferentes sistemas y procedimientos de cerrajería automotriz y cada vez me siento más preparado para realizar trabajos por mi cuenta.</blockquote>
+<figcaption><span class="rev-av">M</span><span class="rev-who"><b>Marcos</b><span><img src="img/flags/ar.png" alt="" width="22" height="15">Argentina</span></span></figcaption>
+</figure>
 </div>
 </div>
 </section>
