@@ -167,6 +167,14 @@ a{color:var(--acc)}
 .rev-who span{display:flex;align-items:center;gap:7px;font-size:15px;color:var(--muted)}
 .rev-who img{border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.2)}
 @media (max-width:900px){.rev{padding:24px}.rev blockquote{font-size:16px}}
+.bens{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ben{display:flex;gap:16px;align-items:flex-start;padding:22px 24px;background:#fff;border:1px solid var(--line);border-radius:16px;transition:transform .2s,border-color .2s,box-shadow .2s}
+.ben:hover{transform:translateY(-3px);border-color:var(--acc);box-shadow:0 12px 26px rgba(200,16,46,.12)}
+.ben-i{flex:none;display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:14px;background:#FDF1F3;color:var(--acc);transition:background .2s,color .2s}
+.ben:hover .ben-i{background:var(--acc);color:#fff}
+.ben b{display:block;font-size:19px;margin-bottom:4px}
+.ben span span{display:block;font-size:16px;line-height:1.45;color:var(--muted)}
+@media (max-width:900px){.bens{grid-template-columns:minmax(0,1fr);gap:12px}.ben{padding:18px}.ben b{font-size:17px}.ben span span{font-size:15px}}
 .sticky{display:none}
 @media (max-width:900px){
  .wrap{padding:0 20px}
@@ -300,6 +308,26 @@ a{color:var(--acc)}
 <button type="button" class="bono" data-full="img/bono-5-diagnostico.jpg" aria-label="Ver bono #5: Diagnóstico automotriz"><span class="bimg"><img src="img/bono-5-diagnostico.jpg" alt="Bono #5: Diagnóstico automotriz" width="800" height="800" loading="lazy"></span><span class="btag">BONO #5</span><span class="bname">Diagnóstico automotriz</span></button>
 <button type="button" class="bono" data-full="img/bono-6-todo.jpg" aria-label="Ver bono #6: Todo en un solo lugar"><span class="bimg"><img src="img/bono-6-todo.jpg" alt="Bono #6: Todo en un solo lugar" width="800" height="800" loading="lazy"></span><span class="btag">BONO #6</span><span class="bname">Todo en un solo lugar</span></button>
 </div>
+</div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="sec">
+<div class="wrap" style="display:flex;flex-direction:column;gap:44px">
+<div class="center"><div class="kicker">BENEFICIOS DEL PACK</div><h2 class="d h2" style="font-size:56px">Todo lo que obtienes al entrar</h2></div>
+<ul class="bens">
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3z"/></svg></span><span><b>22 cursos en video</b><span>Clases grabadas que puedes pausar y repetir las veces que necesites.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18"/><path d="M12 8c-2-4-6-4-6-1.5S10 8 12 8zm0 0c2-4 6-4 6-1.5S14 8 12 8z"/></svg></span><span><b>6 bonos especiales</b><span>Material técnico de ECUs, osciloscopio, diagramas, sensores y diagnóstico.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.2 8.2a5 5 0 1 1 0 7.6L12 12 5.8 8.2a5 5 0 1 0 0 7.6L12 12z"/></svg></span><span><b>Acceso de por vida</b><span>Entras cuando quieras, sin fecha de vencimiento.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="M1 18h16"/><rect x="17" y="8" width="6" height="12" rx="1.5"/></svg></span><span><b>Desde celular o PC</b><span>Estudia desde el dispositivo que tengas a la mano.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><b>A tu propio ritmo</b><span>Sin horarios fijos: avanzas según tu tiempo.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16h14M3 16v-3l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5v3"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg></span><span><b>Varias marcas</b><span>Toyota, Ford, Volkswagen, Chevrolet, Nissan, Renault, Honda y más.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><span><b>Todo en un solo lugar</b><span>Cursos y bonos organizados en una misma plataforma.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><span><b>Pago único</b><span>Pagas una sola vez. Sin mensualidades.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><b>Entrega inmediata</b><span>Recibes tu usuario y contraseña de forma digital.</span></span></li>
+<li class="ben"><span class="ben-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span><b>Garantía de 7 días</b><span>Si no es lo que esperabas, pides tu reembolso en Hotmart.</span></span></li>
+</ul>
+<div style="display:flex;justify-content:center"><a class="btn" href="#oferta">QUIERO TODOS ESTOS BENEFICIOS<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></div>
 </div>
 </section>
 
