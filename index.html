@@ -112,6 +112,39 @@ a{color:var(--acc)}
 @keyframes cdTick{0%{transform:translateY(-35%) scale(1.1);opacity:.4}100%{transform:none;opacity:1}}
 @media (max-width:900px){.cd-bar{gap:8px;padding:8px 12px}.cd-lbl{font-size:16px}.cd-sm .cd-u b{font-size:18px;min-width:34px}.cd-lg .cd-u b{font-size:32px;min-width:56px}.cd-lg .cd-s{font-size:28px;margin-top:8px}.cd-lbl2{font-size:18px}}
 @media (prefers-reduced-motion:reduce){.cd-bar,.cd-lbl svg,.cd-s,.cd-box,.cd-lbl2::before,.cd-u b[data-cd="s"],.cd-u b.tick{animation:none}}
+.hero2{position:relative;overflow:hidden;padding:72px 0 88px;background:radial-gradient(900px 480px at 85% 30%,rgba(200,16,46,.10),transparent 70%),radial-gradient(#C9CED5 1px,transparent 1px) 0 0/22px 22px,var(--bg)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:56px;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:22px;animation:hIn .7s ease both}
+.hero-badge{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:8px 16px;background:#fff;border:1px solid var(--line);border-radius:999px;font-weight:700;font-size:14px;letter-spacing:1.2px;color:var(--acc3);box-shadow:0 4px 14px rgba(28,33,39,.06)}
+.hb-dot{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 0 rgba(200,16,46,.6);animation:cdDot 1.6s infinite}
+.hero-h1{font-size:64px;line-height:1.02}
+.hero-h1 .hl{color:var(--acc);display:inline;background:linear-gradient(transparent 72%,rgba(200,16,46,.14) 72%)}
+.hero-lead{margin:0;font-size:20px;line-height:1.55;color:var(--muted);max-width:560px}
+.hero-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.hero-list li{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:600}
+.hc{flex:none;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff}
+.hero-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:6px}
+.hero-price{display:flex;flex-direction:column;line-height:1.15}
+.hero-price s{font-size:15px;color:var(--dim)}
+.hero-price b{font-family:'Anton',Impact,sans-serif;font-weight:400;font-size:30px;color:var(--acc)}
+.hero-price span{font-size:13px;color:var(--muted)}
+.hero-trust{justify-content:flex-start}
+.hero-visual{position:relative;padding:34px 10px;animation:hIn .8s .15s ease both}
+.hv-glow{position:absolute;inset:8% 6%;border-radius:40px;background:radial-gradient(closest-side,rgba(200,16,46,.22),transparent);filter:blur(10px)}
+.hv-card{position:relative;background:#fff;border-radius:26px;padding:22px 18px;box-shadow:0 30px 60px rgba(28,33,39,.18),0 0 0 1px rgba(28,33,39,.05)}
+.hv-card img{display:block;width:100%;height:auto;border-radius:12px}
+.hv-chip{position:absolute;display:flex;align-items:center;gap:10px;padding:12px 16px;background:#fff;border-radius:16px;box-shadow:0 14px 30px rgba(28,33,39,.16);font-size:14px;font-weight:600;color:var(--text);animation:hFloat 5s ease-in-out infinite}
+.hv-chip svg{color:var(--acc);flex:none}
+.hv-c1{top:-6px;left:-8px;flex-direction:row}
+.hv-c1 b{font-family:'Anton',Impact,sans-serif;font-weight:400;font-size:40px;line-height:1;color:var(--acc)}
+.hv-c1 span{font-size:13px;line-height:1.2;color:var(--muted)}
+.hv-c2{top:0;right:-6px;background:var(--acc);color:#fff;animation-delay:-2.5s}
+.hv-c2 svg{color:#fff}
+.hv-c3{bottom:-10px;left:18px;animation-delay:-1.2s}
+@keyframes hFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes hIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.hero2{padding:36px 0 56px}.hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:20px}.hero-copy{display:contents}.hero-badge{order:1}.hero-h1{order:2}.hero-visual{order:3;padding:26px 6px 30px}.hero-lead{order:4}.hero-list{order:5}.hero-cta{order:6}.hero-trust{order:7}.hero-h1{font-size:44px}.hero-lead{font-size:17px}.hero-list li{font-size:16px}.hero-cta{flex-direction:column;align-items:stretch;gap:14px}.hero-price{flex-direction:row;align-items:baseline;gap:10px;justify-content:center}.hero-price b{font-size:26px}.hero-trust{justify-content:center}.hero-badge{font-size:12px}.hv-card{padding:14px 10px;border-radius:20px}.hv-chip{padding:9px 12px;font-size:12px;border-radius:12px}.hv-c1 b{font-size:30px}.hv-c1{left:-4px}.hv-c2{right:-4px}.hv-c3{left:12px;bottom:-10px}}
+@media (prefers-reduced-motion:reduce){.hv-chip,.hero-copy,.hero-visual,.hb-dot{animation:none}}
 .sticky{display:none}
 @media (max-width:900px){
  .wrap{padding:0 20px}
@@ -147,18 +180,33 @@ a{color:var(--acc)}
 
 <div class="cd-bar cd-wrap"><span class="cd-lbl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>OFERTA EXPIRA EN:</span><div class="cd cd-sm" role="timer" aria-live="off"><div class="cd-u"><b data-cd="d">00</b><span>Días</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="h">00</b><span>Horas</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="m">00</b><span>Min</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="s">00</b><span>Seg</span></div></div></div>
 <!-- HERO -->
-<section class="hero sec" style="padding-bottom:72px">
-<div class="wrap center" style="gap:24px">
-<div style="padding:8px 16px;border:1px solid var(--acc);color:var(--acc);border-radius:999px;font-weight:600;font-size:15px;letter-spacing:1px">22 CURSOS EN VIDEO + 6 BONOS ESPECIALES</div>
-<h1 class="d" style="font-size:84px;max-width:1100px">Conviértete en especialista en <span style="color:var(--acc)">cerrajería automotriz</span></h1>
-<p class="lead">Aprende programación de llaves, controles e inmovilizadores y adquiere los conocimientos para trabajar en el área de la cerrajería automotriz.</p>
-<div style="display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:12px;width:100%;max-width:520px">
+<section class="hero2">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<div class="hero-badge"><span class="hb-dot"></span>22 CURSOS EN VIDEO + 6 BONOS</div>
+<h1 class="d hero-h1">Conviértete en especialista en <span class="hl">cerrajería automotriz</span></h1>
+<p class="hero-lead">Aprende a programar llaves, controles e inmovilizadores paso a paso, en video, y empieza a trabajar en el área de la cerrajería automotriz.</p>
+<ul class="hero-list">
+<li><span class="hc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Programación de llaves con chip</li>
+<li><span class="hc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Programación de controles remotos</li>
+<li><span class="hc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Manejo de inmovilizadores</li>
+</ul>
+<div class="hero-cta">
 <a class="btn" href="#oferta">QUIERO APRENDER AHORA<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-<div class="trust">
-<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Pago único</span>
+<div class="hero-price"><s>US$99.99</s><b>Hoy US$18</b><span>pago único</span></div>
+</div>
+<div class="trust hero-trust">
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Garantía de 7 días</span>
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg>Acceso de por vida</span>
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Celular o PC</span>
 </div>
+</div>
+<div class="hero-visual">
+<div class="hv-glow" aria-hidden="true"></div>
+<div class="hv-card"><img src="img/hero-plataforma.jpg" alt="La plataforma del curso en celular y computador" width="966" height="516" fetchpriority="high"></div>
+<div class="hv-chip hv-c1"><b>22</b><span>cursos<br>en video</span></div>
+<div class="hv-chip hv-c2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18"/><path d="M12 8c-2-4-6-4-6-1.5S10 8 12 8zm0 0c2-4 6-4 6-1.5S14 8 12 8z"/></svg><span><b>+6 bonos</b> de diagnóstico</span></div>
+<div class="hv-chip hv-c3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.3-9.3"/><path d="m16 7 3 3"/><path d="m14 9 2 2"/></svg><span>Llaves · Controles · Inmovilizadores</span></div>
 </div>
 </div>
 </section>
