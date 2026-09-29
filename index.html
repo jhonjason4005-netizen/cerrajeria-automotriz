@@ -9,7 +9,20 @@
 <meta property="og:description" content="22 cursos en video + 6 bonos especiales. Hoy solo US$18, pago único y acceso de por vida.">
 <meta property="og:image" content="img/bono-6-todo.jpg">
 <meta name="theme-color" content="#C8102E">
-<!-- PIXEL DE META: pega aquí tu código -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '918215987778798');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -310,6 +323,9 @@ a{color:var(--acc)}
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=918215987778798&ev=PageView&noscript=1"
+/></noscript>
 
 <div class="topbar cd-wrap"><div class="wrap"><span class="tb-lbl"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg>La oferta expira en</span><div class="cd cd-sm" role="timer" aria-live="off"><div class="cd-u"><b data-cd="d">00</b><span>Días</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="h">00</b><span>Horas</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="m">00</b><span>Min</span></div><i class="cd-s">:</i><div class="cd-u"><b data-cd="s">00</b><span>Seg</span></div></div></div></div>
 
@@ -455,6 +471,12 @@ a{color:var(--acc)}
     });
     lb.addEventListener('click',function(e){ if(e.target!==im) close(); });
     document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+  });
+  /* Meta: inicio de pago al tocar cualquier botón que lleve a Hotmart */
+  safe(function(){
+    [].slice.call(document.querySelectorAll('a[href*="pay.hotmart.com"]')).forEach(function(a){
+      a.addEventListener('click',function(){ if(window.fbq) fbq('track','InitiateCheckout',{value:18,currency:'USD'}); });
+    });
   });
   /* contador de la oferta */
   safe(function(){
