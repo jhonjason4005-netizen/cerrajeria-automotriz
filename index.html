@@ -125,6 +125,85 @@ a{color:var(--acc)}
 .hero-price{display:flex;align-items:baseline;gap:10px}
 .hero-price s{color:var(--dim)}
 .hero-price b{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:26px;color:var(--acc)}
+/* hero v2 */
+.hx{padding:84px 0 72px}
+.hx::after{left:72%;top:-120px;width:900px;height:760px;background:radial-gradient(closest-side,rgba(200,16,46,.16),transparent)}
+.hx .wrap{display:block;text-align:left}
+.hx-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:48px;align-items:center}
+.hx-copy{display:flex;flex-direction:column;align-items:flex-start}
+.proof{display:inline-flex;align-items:center;gap:12px;padding:7px 16px 7px 7px;border-radius:999px;background:#fff;border:1px solid var(--line2);box-shadow:var(--sh1)}
+.avs{display:flex}
+.avs span{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:2px solid #fff;margin-left:-8px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;color:#fff;background:linear-gradient(145deg,#2A313A,#12161B)}
+.avs span:first-child{margin-left:0}.avs span:nth-child(2){background:linear-gradient(145deg,#D8173A,#9E0B23)}.avs span:nth-child(4){background:linear-gradient(145deg,#56606C,#2A313A)}
+.proof-t{display:flex;flex-direction:column;line-height:1.15}
+.proof-t i{font-style:normal;display:flex;gap:1px}
+.proof-t i svg{width:13px;height:13px}
+.proof-t small{font-size:13px;font-weight:600;color:var(--ink2)}
+.proof-t small b{color:var(--acc)}
+.hx .h1{margin:24px 0 0;font-size:clamp(44px,4.9vw,74px);text-align:left;max-width:none}
+.hx .h1 .red{display:inline}
+.hx .hero-sub{margin:22px 0 0;max-width:560px;font-size:19.5px}
+.hx-list{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+.hx-list li{display:flex;align-items:center;gap:12px;font-size:17.5px;font-weight:600;color:var(--ink2)}
+.hx-list li span{flex:none;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--acc);color:#fff;box-shadow:0 4px 10px rgba(200,16,46,.3)}
+.hx-cta{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:34px}
+.hx-price{display:flex;flex-direction:column;line-height:1}
+.hx-price s{font-size:15px;color:var(--dim)}
+.hx-price b{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:44px;color:var(--ink);letter-spacing:-.01em}
+.hx-price b em{font-style:normal;font-size:22px;color:var(--acc);margin-right:2px;vertical-align:top}
+.hx-price small{font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--acc);text-transform:uppercase;margin-top:3px}
+.hx-trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:24px;font-size:14.5px;color:var(--mute)}
+.hx-trust span{display:flex;align-items:center;gap:7px}.hx-trust svg{color:var(--acc)}
+/* visual */
+.hx-vis{position:relative;aspect-ratio:1/1;max-width:560px;width:100%;justify-self:center}
+.hx-ring{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff 0,#F4F5F7 45%,#E4E7EB 70%);box-shadow:inset 0 0 0 1px rgba(18,22,27,.05),0 40px 80px rgba(18,22,27,.10)}
+.hx-ring::before{content:"";position:absolute;inset:-22px;border-radius:50%;border:1.5px dashed rgba(200,16,46,.28);animation:spin 60s linear infinite}
+.hx-card{position:absolute;width:47%;aspect-ratio:1/1;border-radius:20px;overflow:hidden;box-shadow:0 24px 50px rgba(18,22,27,.28),0 0 0 1px rgba(255,255,255,.4);background:#0E1116}
+.hx-card img{width:100%;height:100%;object-fit:cover}
+.hx-c1{left:6%;top:16%;transform:rotate(-12deg);animation:fl1 7s ease-in-out infinite}
+.hx-c2{right:6%;top:12%;transform:rotate(10deg);animation:fl2 8s ease-in-out infinite}
+.hx-c3{left:26.5%;top:24%;width:51%;z-index:2;transform:rotate(-1deg);animation:fl3 6s ease-in-out infinite;box-shadow:0 34px 70px rgba(18,22,27,.36),0 0 0 3px #fff}
+@keyframes fl1{50%{transform:rotate(-14deg) translateY(-8px)}}
+@keyframes fl2{50%{transform:rotate(12deg) translateY(-10px)}}
+@keyframes fl3{50%{transform:rotate(-1deg) translateY(-12px)}}
+.hx-key{position:absolute;left:-1%;bottom:4%;width:23%;z-index:3;filter:drop-shadow(0 18px 24px rgba(18,22,27,.35));transform:rotate(-24deg);animation:kf 5s ease-in-out infinite}
+@keyframes kf{50%{transform:rotate(-18deg) translateY(-10px)}}
+.hx-key .chip{animation:glow .9s ease-in-out infinite alternate}
+@keyframes glow{from{fill:#E0B24A}to{fill:#FFE08A}}
+.hx-badge{position:absolute;right:2%;bottom:10%;z-index:4;width:30%;aspect-ratio:1/1;border-radius:50%;background:linear-gradient(145deg,#E01A3F,#9A0A22);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 18px 36px rgba(200,16,46,.4),inset 0 0 0 4px rgba(255,255,255,.18);transform:rotate(8deg)}
+.hx-badge b{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(30px,3.2vw,44px);line-height:.9}
+.hx-badge span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(12px,1.2vw,15px);letter-spacing:.06em;text-transform:uppercase;line-height:1.05}
+.hx-badge span i{font-style:normal;display:block;font-size:1.5em;color:#FFD6DD}
+.hx-chip{position:absolute;z-index:4;display:flex;align-items:center;gap:9px;padding:10px 14px;border-radius:14px;background:#fff;box-shadow:0 14px 30px rgba(18,22,27,.16);font-size:13.5px;font-weight:700;color:var(--ink);white-space:nowrap;animation:hFloat 5s ease-in-out infinite}
+.hx-chip svg{color:var(--acc);flex:none}
+.hx-ch1{left:2%;top:4%}
+.hx-ch2{right:0;top:48%;animation-delay:-2.4s}
+@keyframes hFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hx .stats{margin:64px auto 0}
+@media (max-width:980px){
+ .hx-grid{grid-template-columns:minmax(0,1fr);gap:8px}
+ .hx-copy{display:contents}
+ .proof{order:1;justify-self:center;align-self:center}
+ .hx .h1{order:2;text-align:center}
+ .hx-vis{order:3;max-width:420px;margin:10px auto 0}
+ .hx .hero-sub{order:4;text-align:center;margin-left:auto;margin-right:auto}
+ .hx-list{order:5;align-self:center;margin-left:auto;margin-right:auto}
+ .hx-cta{order:6;justify-content:center}
+ .hx-trust{order:7;justify-content:center}
+}
+@media (max-width:760px){
+ .hx{padding:44px 0 56px}
+ .hx .h1{font-size:44px;margin-top:20px}
+ .hx .hero-sub{font-size:17px;margin-top:10px}
+ .hx-list li{font-size:16px}
+ .hx-cta{flex-direction:column;gap:14px;align-items:stretch;width:100%}
+ .hx-price{flex-direction:row;align-items:baseline;gap:10px;justify-content:center}
+ .hx-price b{font-size:38px}
+ .hx-chip{font-size:11.5px;padding:7px 10px;border-radius:11px}
+ .hx-chip svg{width:15px;height:15px}
+ .hx .stats{margin-top:40px}
+}
+@media (prefers-reduced-motion:reduce){.hx-card,.hx-key,.hx-chip,.hx-ring::before,.hx-key .chip{animation:none}}
 /* cifras */
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;width:100%;max-width:960px;margin-top:64px}
 .stat{display:flex;flex-direction:column;align-items:center;gap:6px;padding:28px 20px 26px;border-radius:22px;background:rgba(255,255,255,.78);border:1px solid var(--line2);box-shadow:var(--sh1);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:transform .3s,box-shadow .3s}
@@ -468,15 +547,27 @@ src="https://www.facebook.com/tr?id=1136039398753617&ev=PageView&noscript=1"
 </div></nav>
 
 <!-- HERO -->
-<header class="hero"><div class="wrap">
-<div class="pill rv"><b>NUEVO</b>22 cursos en video + 6 bonos especiales</div>
+<header class="hero hx"><div class="wrap">
+<div class="hx-grid">
+<div class="hx-copy">
+<div class="proof rv"><span class="avs" aria-hidden="true"><span>C</span><span>J</span><span>M</span><span>M</span></span><span class="proof-t"><i aria-label="4.8 de 5 estrellas"><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A300" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A300" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A300" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A300" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#F5A300" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></i><small><b>+2.163</b> estudiantes en Latinoamérica</small></span></div>
 <h1 class="h1 rv" style="--rd:.08s">Conviértete en especialista en <span class="red">cerrajería automotriz</span></h1>
 <p class="hero-sub rv" style="--rd:.16s">Aprende a programar llaves, controles e inmovilizadores paso a paso, en video, y empieza a trabajar en el área de la cerrajería automotriz.</p>
-<ul class="hero-pts rv" style="--rd:.24s">
-<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.3-9.3"/><path d="m16 7 3 3"/><path d="m14 9 2 2"/></svg>Llaves con chip</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="15" rx="3"/><circle cx="12" cy="12" r="1.5"/><path d="M12 16v2"/><path d="M8.5 4.5a5 5 0 0 1 7 0"/><path d="M6 2a8.5 8.5 0 0 1 12 0"/></svg>Controles remotos</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><path d="M12 15v2"/></svg>Inmovilizadores</li>
-</ul>
-<div class="hero-cta rv" style="--rd:.32s"><a class="btn" href="#oferta">Quiero aprender ahora<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a><a class="btn-ghost" href="#contenido"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4z"/></svg>Ver el contenido</a></div>
-<div class="hero-meta rv" style="--rd:.4s"><span class="hero-price"><s>US$99.99</s><b>Hoy US$18</b></span><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Garantía de 7 días</span><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.2 8.2a5 5 0 1 1 0 7.6L12 12 5.8 8.2a5 5 0 1 0 0 7.6L12 12z"/></svg>Acceso de por vida</span><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Celular o PC</span></div>
+<ul class="hx-list rv" style="--rd:.22s"><li><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Programación de llaves con chip</li><li><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Programación de controles remotos</li><li><span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Manejo de inmovilizadores</li></ul>
+<div class="hx-cta rv" style="--rd:.3s"><a class="btn" href="#oferta">Quiero aprender ahora<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a><div class="hx-price"><s>Antes US$99.99</s><b><em>US$</em>18</b><small>Pago único</small></div></div>
+<div class="hx-trust rv" style="--rd:.38s"><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Garantía de 7 días</span><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.2 8.2a5 5 0 1 1 0 7.6L12 12 5.8 8.2a5 5 0 1 0 0 7.6L12 12z"/></svg>Acceso de por vida</span><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m9 14.2-1.5 7.3L12 19l4.5 2.5L15 14.2"/><path d="m10 9 1.5 1.5L14.5 7.5"/></svg>Certificado</span><span><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro Hotmart</span></div>
+</div>
+<div class="hx-vis rv" style="--rd:.15s" aria-hidden="true">
+<div class="hx-ring"></div>
+<div class="hx-card hx-c1"><img src="img/bono-1-ecu.jpg" alt="" width="800" height="800"></div>
+<div class="hx-card hx-c2"><img src="img/bono-4-sensores.jpg" alt="" width="800" height="800"></div>
+<div class="hx-card hx-c3"><img src="img/bono-6-todo.jpg" alt="" width="800" height="800" fetchpriority="high"></div>
+<svg class="hx-key" viewBox="0 0 120 220" aria-hidden="true"><defs><linearGradient id="hkb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a424d"/><stop offset="1" stop-color="#15191f"/></linearGradient><linearGradient id="hbl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cfd5db"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#9aa3ad"/></linearGradient></defs><rect x="18" y="4" width="84" height="120" rx="38" fill="url(#hkb)" stroke="#59626e" stroke-width="2"/><circle cx="60" cy="42" r="11" fill="#C8102E"/><rect x="44" y="66" width="32" height="10" rx="5" fill="#59626e"/><rect x="44" y="86" width="32" height="10" rx="5" fill="#59626e"/><path d="M50 124h20v70l-10 14-10-14z" fill="url(#hbl)"/><path d="M70 146h10v9H70zM70 168h10v9H70z" fill="url(#hbl)"/><rect class="chip" x="47" y="100" width="26" height="16" rx="3" fill="#E0B24A"/></svg>
+<div class="hx-badge"><b>22</b><span>cursos<i>+6</i>bonos</span></div>
+<div class="hx-chip hx-ch1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3z"/></svg>Clases en video</div>
+<div class="hx-chip hx-ch2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16h14M3 16v-3l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5v3"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg>+45 marcas</div>
+</div>
+</div>
 <div class="stats"><div class="stat rv" style="--rd:.1s"><span class="stat-i"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b><span class="pl">+</span><span data-count="2163">2163</span></b><span class="lbl">Estudiantes</span></div><div class="stat rv" style="--rd:.18s"><span class="stat-i"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m9 14.2-1.5 7.3L12 19l4.5 2.5L15 14.2"/><path d="m10 9 1.5 1.5L14.5 7.5"/></svg></span><b><span class="pl">+</span><span data-count="1369">1369</span></b><span class="lbl">Certificados entregados</span></div><div class="stat rate rv" style="--rd:.26s"><span class="stat-stars" aria-label="4.8 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5A300" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5A300" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5A300" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F5A300" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="hs"><stop offset="50%" stop-color="#F5A300"/><stop offset="50%" stop-color="#E3D6B8"/></linearGradient></defs><path fill="url(#hs)" d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></span><b>4.8</b><span class="lbl">Valoración del curso</span></div></div>
 </div></header>
 
