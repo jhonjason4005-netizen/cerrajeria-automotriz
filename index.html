@@ -473,6 +473,10 @@ a{color:var(--acc)}
 .of-note{margin:0;font-size:15px;color:var(--mute)}
 .of-r .btn{width:100%;min-height:68px;font-size:19px}
 .secure{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:var(--dim)}
+.pay-help{width:100%;margin:2px 0 0;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg);font-size:14.5px;line-height:1.5;color:var(--ink2);text-align:center}
+.pay-help p{margin:0}
+.pay-help p+p{margin-top:6px}
+.pay-help a{color:var(--acc);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 /* garantía */
 .guar{display:flex;align-items:center;gap:40px;max-width:1060px;margin:40px auto 0;padding:36px 44px;border-radius:24px;background:var(--sf);border:1px solid var(--line2);box-shadow:var(--sh1)}
 .seal{flex:none;position:relative;width:128px;height:128px}
@@ -726,6 +730,7 @@ src="https://www.facebook.com/tr?id=1136039398753617&ev=PageView&noscript=1"
 <p class="of-note">Pago único · Acceso de por vida</p>
 <a class="btn" href="https://pay.hotmart.com/O107812947O?checkoutMode=10">Accede ahora<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
 <div class="secure"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra 100% segura procesada por Hotmart</div>
+<div class="pay-help"><p>Pagas en <b>tu moneda local</b>, con los medios de pago disponibles en tu país.</p><p>¿Problemas para pagar? <a href="https://wa.me/573022182392?text=Hola%2C%20tengo%20un%20problema%20para%20pagar%20el%20curso%20de%20Cerrajer%C3%ADa%20Automotriz" target="_blank" rel="noopener">Escríbenos por WhatsApp</a> y te ayudamos.</p></div>
 </div>
 </div>
 
@@ -869,10 +874,10 @@ function vis(e){var r=e.getBoundingClientRect();return r.top<innerHeight*.85&&r.
 function up(){tk=false;var d=document.documentElement,max=d.scrollHeight-innerHeight;if(bar)bar.style.transform='scaleX('+(max>0?Math.min(1,scrollY/max):0)+')';
 if(st){var past=hero?hero.getBoundingClientRect().bottom<0:true;var ae=document.activeElement;var off=!past||hide.some(vis);st.classList.toggle('off',off);document.body.classList.toggle('st-off',off);}}
 addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(up);}},{passive:true});addEventListener('resize',up);up();})();</script><script>(function(){function ev(n){try{if(window.clarity)clarity('event',n);}catch(e){}}function tag(k,v){try{if(window.clarity)clarity('set',k,v);}catch(e){}}
-var ua=navigator.userAgent||'';tag('navegador',/Instagram/.test(ua)?'instagram_app':/FBAN|FBAV|FB_IAB/.test(ua)?'facebook_app':'otro');
+var ua=navigator.userAgent||'';tag('navegador',/musical_ly|BytedanceWebview|TikTok/i.test(ua)?'tiktok_app':/Instagram/.test(ua)?'instagram_app':/FBAN|FBAV|FB_IAB/.test(ua)?'facebook_app':'otro');
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a,button,summary');if(!a)return;var h=a.getAttribute('href')||'';
 if(h.indexOf('https://pay.hotmart.com/')===0){ev('click_pagar');try{if(window.ttq)ttq.track('InitiateCheckout',{content_name:'Cerrajería Automotriz',value:18,currency:'USD'});}catch(e){}ev(a.closest('.sticky')?'click_pagar_barra':a.closest('#oferta')?'click_pagar_oferta':'click_pagar_otro');}
-else if(h.indexOf('wa.me')>=0){ev('click_whatsapp');}
+else if(h.indexOf('wa.me')>=0){ev('click_whatsapp');if(a.closest('.pay-help'))ev('whatsapp_ayuda_pago');}
 else if(h==='#oferta'){ev('ir_a_oferta');}
 else if(a.tagName==='SUMMARY'){ev('abrir_modulo');}
 else if(a.closest('#marcas')){ev('marcas_click');}},true);
