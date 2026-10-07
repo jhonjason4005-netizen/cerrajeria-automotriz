@@ -760,7 +760,7 @@ safe(function(){
   function ev(n){try{if(window.clarity)clarity('event',n);}catch(e){}}
   function tag(k,v){try{if(window.clarity)clarity('set',k,v);}catch(e){}}
   var ua=navigator.userAgent||'';tag('navegador',/musical_ly|BytedanceWebview|TikTok/i.test(ua)?'tiktok_app':/Instagram/.test(ua)?'instagram_app':/FBAN|FBAV|FB_IAB/.test(ua)?'facebook_app':'otro');
-  tag('version_pagina','v2');
+  tag('version_pagina','v3_amarilla');
   document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a,button,summary');if(!a)return;var h=a.getAttribute('href')||'';
     if(h.indexOf('https://pay.hotmart.com/')===0){ev('click_pagar');
       try{if(window.fbq)fbq('track','InitiateCheckout',{value:18,currency:'USD'});}catch(x){}
