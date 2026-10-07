@@ -380,7 +380,11 @@ body.st-on .wa{bottom:92px}
   .topbar{font-size:13px}
   .logo small{display:none}
   .nav .wrap{min-height:60px}
-  .nav .btn{min-height:40px;font-size:14px;padding:0 14px}
+  .nav .btn{min-height:40px;font-size:14px;padding:0 12px}
+  .logo b{font-size:16px}
+  .logo svg{width:34px;height:34px}
+  .wa{transform:scale(0);transition:transform .2s ease}
+  body.past .wa{transform:none}
   .hero{padding-top:22px}
   .hero-grid{display:flex;flex-direction:column;gap:0}
   .hero-copy{display:contents}
@@ -770,7 +774,7 @@ safe(function(){
 safe(function(){
   var st=document.querySelector('.sticky'),hero=document.querySelector('.tag-hero'),hide=[document.getElementById('oferta'),document.querySelector('.final')],tk=false;
   function vis(e){var r=e.getBoundingClientRect();return r.top<innerHeight*.9&&r.bottom>innerHeight*.1;}
-  function up(){tk=false;var past=hero.getBoundingClientRect().bottom<0;var on=past&&!hide.some(vis);st.classList.toggle('on',on);document.body.classList.toggle('st-on',on);}
+  function up(){tk=false;var past=hero.getBoundingClientRect().bottom<0;var on=past&&!hide.some(vis);st.classList.toggle('on',on);document.body.classList.toggle('st-on',on);document.body.classList.toggle('past',past);}
   addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(up);}},{passive:true});addEventListener('resize',up);up();
 });
 /* medición: Meta, TikTok y Clarity */
