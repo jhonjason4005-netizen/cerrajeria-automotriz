@@ -7,7 +7,8 @@
 <meta name="description" content="Aprende a programar llaves con chip, controles remotos e inmovilizadores en más de 45 marcas. 22 cursos en video + 6 bonos. Pago único de US$18, acceso de por vida y garantía de 7 días.">
 <meta property="og:title" content="Programa llaves y cobra lo que hoy rechazas: 22 cursos + 6 bonos por US$18">
 <meta property="og:description" content="Llaves con chip, controles e inmovilizadores en más de 45 marcas. Pago único, acceso de por vida y garantía de 7 días.">
-<meta property="og:image" content="img/compartir.jpg">
+<meta property="og:image" content="https://cerrajeriamaster.online/img/compartir.jpg?v=3">
+<meta property="og:url" content="https://cerrajeriamaster.online/">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
@@ -127,7 +128,8 @@ p{margin:0}
 .hero-cta .g{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;line-height:1.3;max-width:240px}
 .hero-cta .g svg{width:30px;height:30px;flex:none}
 .stage{position:relative;align-self:stretch;min-height:560px;margin-top:40px}
-.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:6px solid var(--k);border-bottom:0;border-radius:22px 22px 0 0}
+.stage .ph{position:absolute;inset:0;overflow:hidden;background:#FDD302;border:6px solid var(--k);border-bottom:0;border-radius:22px 22px 0 0}
+.stage img{position:absolute;top:0;right:0;width:100%;height:100%;object-fit:cover;object-position:78% 50%}
 .sticker{position:absolute;left:-64px;top:34px;z-index:2;width:200px;height:200px;border-radius:50%;background:var(--k);color:#fff;display:grid;place-items:center;text-align:center;transform:rotate(-12deg);box-shadow:0 0 0 7px var(--y),0 0 0 11px var(--k)}
 .sticker small{display:block;font-size:14px;color:#CFCFCF;font-weight:600}
 .sticker s{color:#9A9A9A;text-decoration-thickness:2px}
@@ -348,8 +350,8 @@ body.st-on .wa{bottom:96px}
 @media (max-width:1020px){
   .nav-links{display:none}
   .hero-grid{grid-template-columns:1fr;gap:0}
-  .stage{min-height:420px;margin-top:70px}
-  .sticker{left:auto;right:6px;top:-86px}
+  .stage{min-height:0;aspect-ratio:1/1;width:100%;max-width:560px;margin:34px auto 0}
+  .sticker{left:26px;right:auto;top:46px}
   .reviews{grid-template-columns:1fr 1fr}
   .logos{grid-template-columns:repeat(4,1fr)}
   .offer{grid-template-columns:1fr;gap:70px}
@@ -375,9 +377,9 @@ body.st-on .wa{bottom:96px}
   .hero .lead{margin-top:18px;font-size:17.5px}
   .hero-cta{margin:26px 0 0}
   .hero-cta .btn{width:100%}
-  .stage{min-height:300px;margin-top:96px}
-  .stage img{border-width:5px;border-radius:18px 18px 0 0}
-  .sticker{width:156px;height:156px;top:-92px;right:4px}
+  .stage{min-height:0;aspect-ratio:1/1;margin-top:30px}
+  .stage .ph{border-width:5px;border-radius:18px 18px 0 0}
+  .sticker{width:150px;height:150px;top:40px;left:22px;right:auto}
   .sticker b{font-size:70px}
   .sticker small{font-size:12.5px}
   .ticker span{font-size:20px;padding:16px 22px}
@@ -443,7 +445,7 @@ body.st-on .wa{bottom:96px}
   <div class="hero-cta"><a class="btn tag-hero" href="https://pay.hotmart.com/O107812947O?checkoutMode=10">Quiero entrar por US$18</a><span class="g"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#111"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="#FFD21F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Pago único. Garantía de 7 días por Hotmart.</span></div>
 </div>
 <div class="stage">
-  <img src="img/fotos/hero.webp" alt="Técnico programando una llave inteligente con un equipo de diagnóstico dentro de un carro" width="1000" height="1000" fetchpriority="high">
+  <div class="ph"><img src="img/fotos/llaves-1000.webp" srcset="img/fotos/llaves-640.webp 640w, img/fotos/llaves-1000.webp 1000w" sizes="(max-width:760px) 100vw, 45vw" alt="Llave de carro plegable, control remoto y llave con chip abierta sobre fondo amarillo" width="1000" height="1000" fetchpriority="high"></div>
   <div class="sticker" aria-label="Antes 99.99 dólares, hoy 18 dólares, pago único"><div><small>Antes <s>US$99.99</s></small><b>$18</b><small>pago único</small></div></div>
 </div>
 </div></header>
